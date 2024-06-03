@@ -20,13 +20,13 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/kidewi/lc3-vm.git
-```\
+```
 
 Compile the source code using any C99 compliant C compiler:
 
 ```bash
 gcc -o lc3-vm vm.cpp
-```\
+```
 
 ## Usage
 
@@ -34,7 +34,7 @@ To run a compiled LC3 program:
 
 ```bash
 ./lc3-vm [image-file1] ...
-```\
+```
 
 The VM expects at least one argument, which is the path to a binary image file containing LC3 machine code.
 
@@ -52,41 +52,41 @@ The VM expects at least one argument, which is the path to a binary image file c
 
 Disables input buffering and echo for the console, making keyboard interactions more responsive and suitable for VM operations.
 
-```c
+```c++
 void disable_input_buffering() {
     ...
 }
-```\
+```
 
 #### `restore_input_buffering`
 
 Restores the original console settings upon program termination or interrupt.
 
-```c
+```c++
 void restore_input_buffering() {
     ...
 }
-```\
+```
 
 #### `read_image`
 
 Reads a binary image file into the VM's memory, adjusting endianness as necessary.
 
-```c
+```c++
 int read_image(const char* image_path) {
     ...
 }
-```\
+```
 
 #### `signal_handling`
 
 Configures signal handling for graceful interruption and shutdown of the VM.
 
-```c
+```c++
 void handle_interrupt(int signal) {
     ...
 }
-```\
+```
 
 
 
